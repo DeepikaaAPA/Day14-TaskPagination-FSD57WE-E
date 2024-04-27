@@ -1,0 +1,30 @@
+ul {
+  list-style-type: none;
+  display: flex;
+}
+ul > li {
+  padding: 10px 15px;
+  border: solid 1px lightgrey;
+  border-right: none;
+  margin: 0px;
+  color: rgb(86, 143, 180);
+  cursor: pointer;
+}
+ul > li:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(86, 143, 180) !important;
+}
+.last {
+  border-right: solid 1px lightgrey;
+}
+.selected {
+  background-color: rgb(86, 143, 180);
+  color: white;
+}
+table {
+  width: 100%;
+}
+h1{
+  text-transform:uppercase;
+  text-align: center;
+}
