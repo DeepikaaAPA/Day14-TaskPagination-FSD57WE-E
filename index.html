@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container-fluid border border-success p-2 p-lg-5 row">
+    <div class="container-fluid p-2 p-lg-5">
       <h1 id="title">Pagination using DOM</h1>
       <p id="description" class="px-3 text-primary lead">
         This page shows implementation of pagination using DOM.
@@ -32,14 +32,21 @@
           <tbody id="table-body"></tbody>
         </table>
       </div>
-      <div id="buttons" class="d-flex justify-contents-center"></div>
-      <ul id="pageBar" class="p-0">
-        <li class="" onclick="firstOnClick()">First</li>
-        <li onclick="previousOnClick()">Previous</li>
-        <li id="page1" class="selected" onclick="pageNoOnClick('page1')">1</li>
-        <!-- <li id="page2" onclick="pageNoOnClick('page2')">2</li>
-      <li id="page3" onclick="pageNoOnClick('page3')">3</li>
-      --></ul>
+      <div id="buttons">
+        <ul id="pageBar"  class="d-flex justify-content-center flex-wrap ">
+          <li class=" first  mb-3 " onclick="firstOnClick()">First</li>
+          <li class=" mb-3" onclick="previousOnClick()">Previous</li>
+          <li
+            id="page1"
+            class="  mb-3 selected"
+            onclick="pageNoOnClick('page1')"
+          >
+            1
+          </li>
+          <!-- <li id="page2" onclick="pageNoOnClick('page2')">2</li>
+        <li id="page3" onclick="pageNoOnClick('page3')">3</li>
+        --></ul>
+      </div>
     </div>
     <script src="script.js"></script>
     <script

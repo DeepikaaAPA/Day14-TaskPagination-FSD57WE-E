@@ -4,8 +4,8 @@ ul {
 }
 ul > li {
   padding: 10px 15px;
-  border: solid 1px lightgrey;
-  border-right: none;
+  border: solid 2px lightgrey;
+
   margin: 0px;
   color: rgb(86, 143, 180);
   cursor: pointer;
@@ -14,8 +14,11 @@ ul > li:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(86, 143, 180) !important;
 }
+.first {
+  border-left: solid 3px lightgrey;
+}
 .last {
-  border-right: solid 1px lightgrey;
+  border-right: solid 3px lightgrey;
 }
 .selected {
   background-color: rgb(86, 143, 180);

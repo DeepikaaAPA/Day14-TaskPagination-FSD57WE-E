@@ -503,28 +503,28 @@ let data = [
 
 // console.log(data.length);
 let totalItems = data.length;
-let nItemsPerPage = 20;
+let nItemsPerPage = 5;
 let nPages = Math.ceil(totalItems / nItemsPerPage);
 console.log(nPages);
 
 function loadPageNumbersList() {
   let list = document.getElementById("pageBar");
   for (let i = 2; i <= nPages; i++) {
-    list.innerHTML += `<li id="page${i}" onclick="pageNoOnClick('page${i}')">${i}</li>`;
+    list.innerHTML += `<li class=" mb-3" id="page${i}" onclick="pageNoOnClick('page${i}')">${i}</li>`;
   }
-  list.innerHTML += `<li onclick="nextOnClick()">Next</li>
-    <li class="last" onclick="lastOnClick()">Last</li>`;
+  list.innerHTML += `<li class=" mb-3" onclick="nextOnClick()">Next</li>
+    <li class="last  mb-3" onclick="lastOnClick()">Last</li>`;
   displayPage(1);
 }
 
 loadPageNumbersList();
 function displayPage(pageNo) {
   let end = pageNo * nItemsPerPage;
-  let start = end - nItemsPerPage+1;
-  console.log(start,end,pageNo)
+  let start = end - nItemsPerPage + 1;
+  console.log(start, end, pageNo);
 
   let tbody = document.getElementById("table-body");
-  tbody.innerHTML ="";
+  tbody.innerHTML = "";
   for (let i = start - 1; i < end && i < totalItems; i++) {
     tbody.innerHTML += `<tr><td>${data[i].id}</td>
         <td>${data[i].name}</td>
@@ -544,8 +544,8 @@ function pageNoOnClick(pageNo) {
   let page = document.getElementById(pageNo);
   page.style.backgroundColor = "rgb(86, 143, 180)";
   page.classList.add("selected");
-  console.log(page.innerText,typeof page.innerText)
-  displayPage(+(page.innerText));
+  console.log(page.innerText, typeof page.innerText);
+  displayPage(+page.innerText);
 }
 
 function firstOnClick() {
